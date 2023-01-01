@@ -1,8 +1,10 @@
 ---
-title: "Welcome to my blog"
+layout: default
+title: 我的Blog
 ---
+{{ page.title }}
+最新文章
 
-I'm glad you are here. I plan to talk about ...
-my learning of coding!
-my name is Snow Li
-I'm new comer of github
+{% for post in site.posts %}
+{{ post.date | date_to_string }} {{ post.title }}
+{% endfor %}
